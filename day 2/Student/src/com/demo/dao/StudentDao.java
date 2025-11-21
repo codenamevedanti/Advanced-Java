@@ -20,6 +20,8 @@ public interface StudentDao {
 
 	Student getById(int studentId);
 
+	boolean removeById();
+
 	
 
 	

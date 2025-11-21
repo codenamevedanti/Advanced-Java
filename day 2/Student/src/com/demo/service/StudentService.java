@@ -14,7 +14,7 @@ public interface StudentService {
 
 	List<Student> displayAll();
 
-	Student findByID();
+	Student findByID(int studentId);
 
 	
 

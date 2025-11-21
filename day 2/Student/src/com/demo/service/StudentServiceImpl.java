@@ -42,7 +42,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public void closeMyConnection() {
-		return sdao.closeMyConnection();
+		 sdao.closeMyConnection();
 		
 	}
 
@@ -57,8 +57,8 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student findByID() {
-		return sdao.getById();
+	public Student findByID(int studentId) {
+		return sdao.getById(studentId);
 	}
    
 	

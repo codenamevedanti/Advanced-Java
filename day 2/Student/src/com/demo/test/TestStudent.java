@@ -51,8 +51,8 @@ public class TestStudent {
 	     
 	     case 4->{
 	    	 System.out.println("Enetr the student id:");
-	    	 int id=sc.nextInt();
-	    	 Student st=s.findByID();
+	    	 int studentId=sc.nextInt();
+	    	 Student st=s.findByID(studentId);
 	    	 if(st==null) {
 	    		 System.out.println("Student not found.");
 	    	 }else {

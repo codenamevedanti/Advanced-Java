@@ -45,20 +45,7 @@ static {
 		return false;
 	}
 
-	@Override
-	public boolean removeById(int studentID) {
-		try{
-			deletebyId.setInt(1, studentID);
-		
-        int n=deletebyId.executeUpdate();
-        if(n>0) {
-        	return true;
-        }
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		return false;
-	}
+	
 
 	@Override
 	public Object closeMyConnection() {
@@ -89,8 +76,9 @@ static {
 			}
 }
 
+
 	@Override
-	public Student getById(int studentId) {
+	public Student getById(int studentId ) {
 		Student st=null;
 		try {
 			findById.setInt(1, studentId);
@@ -106,7 +94,37 @@ static {
 				e.printStackTrace();
 			}
 		return st;
+	}
+
+	@Override
+	public boolean removeById(int studentId) {
+		try {
+			deletebyId.setInt(1, studentId);
+			int n=deletebyId.executeUpdate();
+			if(n>0) {
+				return true;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
 		}
+		return false;
+	}
+//	@Override
+//	public boolean removeById(int studentID) {
+//		try{
+//			deletebyId.setInt(1, studentID);
+//		
+//        int n=deletebyId.executeUpdate();
+//        if(n>0) {
+//        	return true;
+//        }
+//		}catch(SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return false;
+//	}
+
+	
 		
 		
 		
